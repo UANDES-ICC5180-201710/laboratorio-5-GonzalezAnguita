@@ -1,7 +1,9 @@
+<% content_for :sub_menu do %>
+    <%= render 'courses/sub_menu', id: @course.id, new_link: :students %>
+<% end %>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Students</h1>
 
 <%= render 'people/list', people: @course.students%>
-
-<br>

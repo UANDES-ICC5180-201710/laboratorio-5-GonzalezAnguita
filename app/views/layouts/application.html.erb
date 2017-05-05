@@ -19,6 +19,7 @@
   <body>
     <%= render 'layouts/navbar' %>
     <div class="container">
+        <%= yield :sub_menu %>
         <%= yield %>
     </div>
   </body>

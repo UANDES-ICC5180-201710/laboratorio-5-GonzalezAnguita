@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-lg-11">
+        <div class="btn-group btn-group-lg" role="group">
+            <%= link_to @course, "/courses/#{id}", class: 'btn btn-primary' %>
+        </div>
+        <i class="glyphicon glyphicon-chevron-right"></i>
+        <div class="btn-group" role="group">
+            <%= link_to 'Students', "/courses/#{id}/students", class: 'btn btn-default' %>
+            <%= link_to 'Assignments', "/courses/#{id}/assignments", class: 'btn btn-default' %>
+        </div>
+
+        <% if new_link == :assignments %>
+            <i class="glyphicon glyphicon-chevron-right"></i>
+            <div class="btn-group" role="group">
+                <%= link_to 'New Assignment', new_assignment_path, class: 'btn btn-md btn-success' %>
+            </div>
+        <% elsif new_link == :students %>
+            <i class="glyphicon glyphicon-chevron-right"></i>
+            <div class="btn-group" role="group">
+                <%= link_to 'New Enrollment', new_enrollment_path, class: 'btn btn-md btn-success' %>
+            </div>
+        <% end %>
+    </div>
+</div>
